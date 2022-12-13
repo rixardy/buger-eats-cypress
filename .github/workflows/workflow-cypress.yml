@@ -11,10 +11,10 @@ jobs:
       fail-fast: false
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
       
       - name: 'UI Tests - Chrome'
-        uses: cypress-io/github-action@v4
+        uses: cypress-io/github-action@v4.2.0
         with:
           install-command: yarn install
           wait-on: ${{ secrets.BASE_URL }}
@@ -22,7 +22,6 @@ jobs:
           browser: chrome
           record: true
           group: 'UI - Chrome'
-          spec: cypress/integration/*
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
