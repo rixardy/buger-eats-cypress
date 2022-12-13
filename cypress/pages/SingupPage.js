@@ -2,8 +2,8 @@
 class SingupPage {
     
     go() {
-        cy.viewport(1440, 900) //define a resolução da janela do navegador
-        cy.visit('https://buger-eats-qa.vercel.app') //acessar URL alvo do teste
+        //cy.viewport(1440, 900) //define a resolução da janela do navegador
+        cy.visit('/') //acessar URL alvo do teste
         cy.get('#page-home > div > main > a').click()
         cy.get('#page-deliver > form > h1')
             .should('have.text', 'Cadastre-se para  fazer entregas')//verifico se estou na tela correta, buscando uma informação especifica
