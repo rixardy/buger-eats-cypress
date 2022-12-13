@@ -6,9 +6,9 @@ module.exports = defineConfig({
 
   e2e: {
     baseUrl: 'https://buger-eats-qa.vercel.app',
+    projectId: "15ira7", 
     setupNodeEvents(on, config) {
       // implement node event listeners here
-      projectId: "15ira7"
     },
   },
 });
